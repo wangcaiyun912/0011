@@ -1,0 +1,30 @@
+#北京
+#程序员
+#公务员
+#领导
+#牛比
+#牛逼
+#你娘
+#你妈
+#love
+#sex
+#jiangge
+
+
+def miganci():
+    file = open('filtered_words',encoding='UTF-8')
+    text = file.read()
+    text_list = text.split('\n')
+    guest_word = input('请输入一个你的词语：')
+    for word in text_list:
+        if word in guest_word:
+            new_word = guest_word.replace(word,'*'*len(word))
+            print(new_word)
+            print('Freedom')
+            return
+        else:
+            print('Human Rights')
+            return
+    file.close()
+
+miganci()
